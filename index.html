@@ -12,6 +12,62 @@
     <script defer src="./assets/js/script.js"></script>
 </head>
 <body>
-    
+    <header>
+        <div class="container">
+            <img src="./assets/img/logo.png" alt="Calculator Logo">
+            <h1>Calculator</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="calculator">
+                <div class="row">
+                    <div class="display">
+                        <!-- display -->
+                    </div>
+                </div>
+                <!-- buttons -->
+                <div class="row">
+                    <button id="clear">AC</button>
+                    <button id="delete">CE</button>                    
+                </div>
+                <div class="row">
+                    <button class="number" onclick="addNumber(this)">7</button>
+                    <button class="number" onclick="addNumber(this)">8</button>
+                    <button class="number" onclick="addNumber(this)">9</button>
+                    <button class="operator" onclick="addOperator(this)">/</button>
+                </div>
+                <div class="row">
+                    <button class="number" onclick="addNumber(this)">4</button>
+                    <button class="number" onclick="addNumber(this)">5</button>
+                    <button class="number" onclick="addNumber(this)">6</button>
+                    <button class="operator" onclick="addOperator(this)">*</button>
+                </div>
+                <div class="row">
+                    <button class="number" onclick="addNumber(this)">1</button>
+                    <button class="number" onclick="addNumber(this)">2</button>
+                    <button class="number" onclick="addNumber(this)">3</button>
+                    <button class="operator" onclick="addOperator(this)">-</button>
+                </div>
+                <div class="row">
+                    <button class="number" onclick="addNumber(this)">0</button>
+                    <button class="number" onclick="addNumber(this)">.</button>
+                    <button class="operator" onclick="calculate()">=</button>
+                    <button class="operator" onclick="addOperator(this)">+</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>
+                Made with ❤️ by Willian
+            </p>
+            <hr>
+            <p>
+            Calculator &copy; 2025 - All rights reserved.
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
