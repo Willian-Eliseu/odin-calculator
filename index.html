@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Calculator made as part of the foundations course of the The Odin Project">    
+    <meta name="description" content="Calculator made as part of the foundations course of the The Odin Project">
     <meta name="keywords" content="Calculator, Odin, Project, Foundations">
     <title>Calculator</title>
     <link rel="shortcut icon" href="./assets/img/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script defer src="./assets/js/script.js"></script>
 </head>
+
 <body>
     <header>
         <div class="container">
             <img src="./assets/img/logo.png" alt="Calculator Logo">
-            <h1>Calculator</h1>
+            <h1 class="text-light">Calculator</h1>
         </div>
     </header>
     <main>
@@ -24,12 +26,14 @@
                 <div class="row">
                     <div class="display">
                         <!-- display -->
+                        <div id="operation">1+5</div>
+                        <div id="result">6</div>
                     </div>
                 </div>
                 <!-- buttons -->
                 <div class="row">
                     <button id="clear">AC</button>
-                    <button id="delete">CE</button>                    
+                    <button id="delete">CE</button>
                 </div>
                 <div class="row">
                     <button class="number" onclick="addNumber(this)">7</button>
@@ -60,14 +64,17 @@
     </main>
     <footer>
         <div class="container">
-            <p>
-                Made with ❤️ by Willian
-            </p>
-            <hr>
-            <p>
-            Calculator &copy; 2025 - All rights reserved.
-            </p>
+            <div class="footer-content">
+                <p>
+                    Made with ❤️ by Willian
+                </p>
+                <hr>
+                <p>
+                    Calculator &copy; 2025 - All rights reserved.
+                </p>
+            </div>
         </div>
     </footer>
 </body>
+
 </html>
