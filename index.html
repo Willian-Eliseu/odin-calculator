@@ -26,14 +26,14 @@
                 <div class="row">
                     <div class="display">
                         <!-- display -->
-                        <div id="operation">1+5</div>
-                        <div id="result">6</div>
+                        <div id="operation"></div>
+                        <div id="operation-result"></div>
                     </div>
                 </div>
                 <!-- buttons -->
                 <div class="row">
-                    <button id="clear">AC</button>
-                    <button id="delete">CE</button>
+                    <button id="clear" onclick="clearAll()">AC</button>
+                    <button id="delete" onclick="deleteLast()">CE</button>
                 </div>
                 <div class="row">
                     <button class="number" onclick="addNumber(this)">7</button>
