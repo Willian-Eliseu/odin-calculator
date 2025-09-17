@@ -55,6 +55,7 @@ function addOperator(operator) {
 
 function refreshDisplay(){
     let calcResult = `${calculator.result}`;
+
     if(calcResult.length > 11){
         clearAll();
         operationResult.innerHTML = 'ERROR';
@@ -80,7 +81,17 @@ function calculate(){
             result = parseFloat(calculator.firstNumber) / parseFloat(calculator.secondNumber);
             break;
     }
-    calculator.result = result.toFixed(4);
+
+    let calculatedResult = result.toString();
+
+    if(calculatedResult.indexOf('.') > -1){
+        let splitResult = calculatedResult.split('.');
+        if(splitResult[1].length > 4){
+            result = parseFloat(result.toFixed(4));
+        }
+    }
+
+    calculator.result = result;
     refreshDisplay();
 }
 
