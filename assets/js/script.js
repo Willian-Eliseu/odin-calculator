@@ -39,12 +39,19 @@ function addNumber(number) {
 }
 
 function addOperator(operator) {
+    console.log(calculator);
     let operatorValue = operator.innerHTML;
 
-    if(calculator.result > 0){
+    if(calculator.result.length > 0){
         calculator.firstNumber = calculator.result;
         calculator.result = 0;
         calculator.secondNumber = '';
+    }
+
+    if(calculator.firstNumber.length > 0 && calculator.secondNumber.length > 0){
+        calculate();
+        addOperator(operator);
+        return;
     }
 
     if(operators.includes(operatorValue)){
@@ -91,7 +98,7 @@ function calculate(){
         }
     }
 
-    calculator.result = result;
+    calculator.result = `${result}`;
     refreshDisplay();
 }
 
